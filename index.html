@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My first Bulma website2 </title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <section class="hero is-small is-bold">
+        <div class="hero-body">
+            <div class="columns is-multiline-mobile is-multiline-tablet">
+                <div class="column is-full-mobile is-half-tablet">
+                    <figure class="image is-16by9">
+                        <img src="./img/womens_six_nations.png">
+                      </figure>
+                </div>
+                
+                <div class="column is-full-mobile is-half-tablet section-titles">
+                    <p class="title title-tournoi">Tournoi des Six Nations 2022 féminin</p>
+                    <div class="is-spaced">
+                        <p class="subtitle subtitle-tournoi">Tournoi des Six NationsFéminin aura lieu du 26 mars au 30 avril 2022.</p>
+                    </div>
+                
+                </div>
+              </div>
+        </div>
+    </section>
+    
+    <section class="section is-flex is-flex-direction-column is-mobile">
+        <div class="is-flex">
+            <p class="ml-4 link">Tournoi des Six Nations 2022 féminin</p>
+        </div>
+        <div class="is-flex">
+            <p class="separator"> / </p>
+        </div>
+        <div class="is-flex">
+            <p class="separator"> Tours</p>
+        </div> 
+    </section
+    >
+    <section class="section is-flex-direction-column is-mobile tous-section">
+        <div class="title is-spaced is-1">Tours</div>
+        <div class="subtitle is-2">Calendrier des matchs</div>
+    </section>
+
+      <div class="tile is-ancestor tile-margin">
+        <div class="tile is-parent is-hidden-mobile">
+            <article class="tile is-child notification is-success">
+              <div class="content">
+                <div class="content">
+                    <aside class="menu">
+                        <p class="menu-label">
+                          Tours
+                        </p>
+                        <ul class="menu-list">
+                          <li id="tous"><a>Tous les tours</a></li>
+                          <li id="tour1"><a>Tour 1</a></li>
+                          <li id="tour2"><a>Tour 2</a></li>
+                          <li id="tour3"><a>Tour 3</a></li>
+                          <li id="tour4"><a>Tour 4</a></li>
+                        </ul>
+                        <p class="menu-label">
+                          Stades
+                        </p>
+                        <ul class="menu-list">
+                          <li><a>Twickenham</a></li>
+                          <li><a>Murrayfield</a></li>
+                          <li><a>Stade de France</a></li>
+                          <li><a>Principality Stadium</a></li>
+                          <li><a>Aviva Stadium</a></li>
+                          <li><a>Stade olympique</a></li>
+                        </ul>
+                        <p class="menu-label">
+                          Equipes
+                        </p>
+                        <ul class="menu-list">
+                          <li><a>Angleterre</a></li>
+                          <li><a>Ecosse</a></li>
+                          <li><a>France</a></li>
+                          <li><a>Irlande</a></li>
+                          <li><a>Italie</a></li>
+                          <li><a>Pays de Galles</a></li>
+                        </ul>
+                      </aside>
+                </div>
+              </div>
+            </article>
+          </div>
+        <div class="tile is-vertical is-8" id="all-matches">
+          
+          <!-- Menu cache -->
+          <div class="tabs is-centered" style="display: none; margin-bottom: 50px;" id="menu">
+            <ul>
+              <li id="li-tours"><a>Tous</a></li>
+              <li id="li-tour1"><a>Tour 1</a></li>
+              <li id="li-tour2"><a>Tour 2</a></li>
+              <li id="li-tour3"><a>Tour 3</a></li>
+              <li id="li-tour4"><a>Tour 4</a></li>
+            </ul>
+          </div>
+          <div class="tile is-parent" id="parent1">
+            <!-- Content -->
+            
+            <div class="columns" id="first-columns">
+                            <div class="column" id="matches-tour-1">
+                              <div class="table-container">
+                                  <table class="table">
+                                    <tr>
+                                      <th colspan="3">Tour 1</th>
+                                    </tr>
+                                    <tr class="is-flex">
+                                    <td>
+                                      <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/scotland.svg">
+                                      </figure>
+                                    </td>
+                                    <td>
+                                        <div >
+                                          Ecosse  / Angleterre
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <figure class="image image is-48x48">
+                                            <img class="is-rounded" src="./img/angleterre.svg">
+                                        </figure>
+                                    </td>
+                                  </tr>
+                                      <tr class="is-flex">
+                                        <td>
+                                  <figure class="image image is-48x48">
+                                      <img class="is-rounded" src="./img/irlande.svg">
+                                  </figure>
+                                </td>
+                                <td>
+                                    <div >
+                                      Irlande  / Pays de galles
+                                    </div>
+                                </td>
+                                <td>
+                                    <figure class="image image is-48x48">
+                                      <img class="is-rounded" src="./img/pays_galles.svg">
+                                    </figure>
+                                </td>
+                            </tr>
+                            <tr class="is-flex">
+                                <td>
+                                  <figure class="image image is-48x48">
+                                      <img class="is-rounded" src="./img/france.svg">
+                                  </figure>
+                                </td>
+                                <td>
+                                    <div >
+                                      France  / Italie
+                                    </div>
+                                </td>
+                                <td>
+                                    <figure class="image image is-48x48">
+                                      <img class="is-rounded" src="./img/italie.png">
+                                    </figure>
+                                </td>
+                            </tr>
+                          
+                              </table>
+                              </div>      
+                            </div>  
+                            <div class="column" id="matches-tour-2">
+                              <div class="table-container">
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="3">Tour 2</th>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                                      <img class="is-rounded" src="./img/france.svg">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               France  / Irlande
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                                 <img class="is-rounded" src="./img/irlande.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/pays_galles.svg">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               Pays de galles  / Ecosse
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/scotland.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/italie.png">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               Italie  / Angleterre
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/angleterre.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                   
+                                </table>
+                            </div>
+                            </div>  
+              </div>        
+                <!-- =======--> 
+          </div>
+          <div class="tile is-parent">
+            <!-- Content -->
+            <div class="columns" id="second-columns">
+                            <div class="column" id="matches-tour-3">
+                              <div class="table-container">
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="3">Tour 3</th>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                                      <img class="is-rounded" src="./img/angleterre.svg">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               Angleterre  / Pays de Galles
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                                 <img class="is-rounded" src="./img/pays_galles.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/scotland.svg">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                                Ecosse  / France
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/france.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/irlande.svg">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               Irlande  / Italie
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/italie.png">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                   
+                                </table>
+                            </div>
+                            </div>  
+                            <div class="column" id="matches-tour-4">
+                              <div class="table-container">
+                                <table class="table">
+                                    <tr>
+                                        <th colspan="3">Tour 4</th>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                                      <img class="is-rounded" src="./img/pays_galles.svg">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               Pays de Galles  / France
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                                 <img class="is-rounded" src="./img/france.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/italie.png">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               Italie  / Ecosse
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/scotland.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                    <tr class="is-flex">
+                                        <td>
+                                          <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/angleterre.svg">
+                                          </figure>
+                                        </td>
+                                        <td>
+                                            <div >
+                                               Angleterre  / Irlande
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <figure class="image image is-48x48">
+                                              <img class="is-rounded" src="./img/irlande.svg">
+                                            </figure>
+                                        </td>
+                                    </tr>
+                                   
+                                </table>
+                            </div>  
+                            </div>  
+              </div>        
+                <!-- =======--> 
+          </div>
+        </div>
+      </div>
+
+
+    <script type="text/javascript" src="lib/main.js"></script>    
+  </body>
+</html>

@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+
+//$primary: $pink;
+//$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+
+
+
+
+html {
+        background-color: 'white';
+}
+
+.hero {
+    background: linear-gradient($purple, #ffffff);
+}
+
+.link {
+    color:#8282f5;
+}
+
+.separator {
+    margin-left: 4px;
+}
+
+
+.title.title-tournoi {
+    font-size: $size-3;    
+}  
+
+.subtitle.subtitle-tournoi {
+    font-size: $size-5;    
+}
+.column.is-half-tablet.section-titles {
+    padding: 60px;
+}
+
+.tile.is-ancestor.tile-margin {
+    margin: 20px;
+}
+
+.section.is-flex.is-flex-direction-column.is-mobile,
+.section.is-flex-direction-column.is-mobile.tous-section {
+    padding-top: 0;
+}
+
+table tbody tr:nth-child(2n) {
+    background-color: rgb(230, 228, 228);
+  }
+
+table tbody tr {
+    padding: 20px;
+}
+
+td > div.column {
+    text-align: center;
+}
+
+table tr td  > div {
+    width: 100%;
+    text-align: center;
+}
+
+tr .is-flex{
+    align-items: center;
+}
+
+.content table tr td:nth-child(2){
+    width: 100%;
+}
+
+article.tile.is-child.notification.is-bold{
+    background-color: rgba(119, 119, 119, 0.336);
+}
+
+div.columns {
+    text-align: -webkit-center;
+}
+@media (min-width: $tablet), print {
+      .title-tournoi {
+        font-size: $size-2;    
+        padding: 60px
+    }  
+    
+    .subtitle.subtitle-tournoi {
+        font-size: $size-4;
+    }
+
+    .column.is-half-tablet.section-titles {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        margin-top: 10%;
+        padding-right: 60px
+    }
+}
+
+@import "../node_modules/bulma/bulma";
