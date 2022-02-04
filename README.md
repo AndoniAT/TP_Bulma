@@ -1,8 +1,21 @@
 # TP_Bulma
 Decuvrir le framework bulma
-ANDONI ALONSO TORT
-UNIVERSITE DU HAVRE
+Andoni ALONSO TORT
 L3 INFORMATIQUE
+UNIVERSITE DU HAVRE
+
+TP BULMA
+
+Projet fait avec node js pour installer bulma et utiliser sass
+faire : 
+- npm install 
+pour installer les dépendences.
+
+puis
+- npm start
+
+CLONE GIT
+git clone https://github.com/AndoniAT/TP_Bulma.git
 
 # Start package for [Bulma](http://bulma.io)
 
