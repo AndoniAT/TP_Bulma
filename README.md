@@ -1,5 +1,9 @@
 # TP_Bulma
 Decuvrir le framework bulma
+ANDONI ALONSO TORT
+UNIVERSITE DU HAVRE
+L3 INFORMATIQUE
+
 # Start package for [Bulma](http://bulma.io)
 
 Tiny npm package that includes the `npm` **dependencies** you need to **build your own website** with Bulma.
