@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('tour3').addEventListener('click', function(){
     cacherTous();
-    activerli('li-tour2');
+    activerli('li-tour3');
     afficherTour('col-tour-3');
   });
 
