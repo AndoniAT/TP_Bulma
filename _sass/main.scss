@@ -98,6 +98,31 @@ article.tile.is-child.notification.is-bold{
 div.columns {
     text-align: -webkit-center;
 }
+
+#parent1 {
+    flex-grow: unset;
+
+}
+
+#article_scot_last{
+    background-color: #666b6d2f;
+}
+
+#article_equipe_scot_last {
+    background-color: $black-ter;
+}
+#article_equipe_scot_last figcaption{
+    color: white;
+}
+
+.imgRedonda {
+    width:100px;
+    height:100px;
+    border-radius:150px;
+    border:0.2px solid white;
+    background-size: cover;
+}
+
 @media (min-width: $tablet), print {
       .title-tournoi {
         font-size: $size-2;    

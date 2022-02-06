@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My first Bulma website2 </title>
+    <title>Tours </title>
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -41,8 +41,13 @@
     </section
     >
     <section class="section is-flex-direction-column is-mobile tous-section">
-        <div class="title is-spaced is-1">Tours</div>
-        <div class="subtitle is-2">Calendrier des matchs</div>
+        <div class="title is-spaced is-1" id="tours_title">Tours</div>
+        <div class="subtitle is-2" id="tours-subtitle">Calendrier des matchs</div>
+        
+        <div class="title is-spaced is-1" id="tours_title_equipe" style="display: none;">Equipe</div>
+
+        <div class="subtitle is-2" id="tours-subtitle-ec" style="display: none;">Ecosse</div>
+
     </section>
 
       <div class="tile is-ancestor tile-margin">
@@ -76,12 +81,12 @@
                           Equipes
                         </p>
                         <ul class="menu-list">
-                          <li><a>Angleterre</a></li>
-                          <li><a>Ecosse</a></li>
-                          <li><a>France</a></li>
-                          <li><a>Irlande</a></li>
-                          <li><a>Italie</a></li>
-                          <li><a>Pays de Galles</a></li>
+                          <li id="e-angleterre"><a>Angleterre</a></li>
+                          <li id="e-ecosse"><a>Ecosse</a></li>
+                          <li id="e-france"><a>France</a></li>
+                          <li id="e-irlande"><a>Irlande</a></li>
+                          <li id="e-italie"><a>Italie</a></li>
+                          <li id="e-pays-galles"><a>Pays de Galles</a></li>
                         </ul>
                       </aside>
                 </div>
@@ -104,263 +109,701 @@
             <!-- Content -->
             
             <div class="columns" id="first-columns">
-                            <div class="column" id="matches-tour-1">
-                              <div class="table-container">
-                                  <table class="table">
+                        <div class="column" id="matches-tour-1">
+                              <div class="table-container   ">
+                                  <table class="table is-fullwidth">
                                     <tr>
                                       <th colspan="3">Tour 1</th>
                                     </tr>
-                                    <tr class="is-flex">
-                                    <td>
-                                      <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/scotland.svg">
-                                      </figure>
-                                    </td>
-                                    <td>
-                                        <div >
-                                          Ecosse  / Angleterre
-                                        </div>
-                                    </td>
-                                    <td>
+
+                                    <tr>
+                                      <td class="is-pulled-left" style="margin-left: 30px;">
+                                          <figure class="image is-64x64">
+                                                <img class="is-rounded" src="./img/scotland.svg">
+                                          </figure>
+                                      </td>
+                                      
+                                      <td class="has-text-centered">
+                                          <div >
+                                            Ecosse  / Angleterre
+                                          </div>
+                                      </td>
+                                      
+                                      <td class="is-pulled-right" style="margin-right: 30px;">
                                         <figure class="image image is-48x48">
                                             <img class="is-rounded" src="./img/angleterre.svg">
                                         </figure>
-                                    </td>
-                                  </tr>
-                                      <tr class="is-flex">
-                                        <td>
-                                  <figure class="image image is-48x48">
-                                      <img class="is-rounded" src="./img/irlande.svg">
-                                  </figure>
-                                </td>
-                                <td>
-                                    <div >
-                                      Irlande  / Pays de galles
-                                    </div>
-                                </td>
-                                <td>
-                                    <figure class="image image is-48x48">
-                                      <img class="is-rounded" src="./img/pays_galles.svg">
-                                    </figure>
-                                </td>
-                            </tr>
-                            <tr class="is-flex">
-                                <td>
-                                  <figure class="image image is-48x48">
-                                      <img class="is-rounded" src="./img/france.svg">
-                                  </figure>
-                                </td>
-                                <td>
-                                    <div >
-                                      France  / Italie
-                                    </div>
-                                </td>
-                                <td>
-                                    <figure class="image image is-48x48">
-                                      <img class="is-rounded" src="./img/italie.png">
-                                    </figure>
-                                </td>
-                            </tr>
-                          
-                              </table>
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td class="is-pulled-left" style="margin-left: 30px;">
+                                          <figure class="image is-64x64">
+                                                <img class="is-rounded" src="./img/irlande.svg">
+                                          </figure>
+                                      </td>
+                                      
+                                      <td class="has-text-centered">
+                                          <div >
+                                            Irlande  / Pays de Galles
+                                          </div>
+                                      </td>
+                                      
+                                      <td class="is-pulled-right" style="margin-right: 30px;">
+                                        <figure class="image image is-48x48">
+                                            <img class="is-rounded" src="./img/pays_galles.svg">
+                                        </figure>
+                                      </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                      <td class="is-pulled-left" style="margin-left: 30px;">
+                                          <figure class="image is-64x64">
+                                                <img class="is-rounded" src="./img/france.svg">
+                                          </figure>
+                                      </td>
+                                      
+                                      <td class="has-text-centered">
+                                          <div >
+                                            France  / Italie
+                                          </div>
+                                      </td>
+                                      
+                                      <td class="is-pulled-right" style="margin-right: 30px;">
+                                        <figure class="image image is-48x48">
+                                            <img class="is-rounded" src="./img/italie.png ">
+                                        </figure>
+                                      </td>
+                                    </tr>
+                                  </table>
+                            
                               </div>      
-                            </div>  
-                            <div class="column" id="matches-tour-2">
-                              <div class="table-container">
-                                <table class="table">
+                        </div>
+
+                        <div class="column" id="matches-tour-2">
+                              <div class="table-container   ">
+                                  <table class="table is-fullwidth">
                                     <tr>
-                                        <th colspan="3">Tour 2</th>
+                                      <th colspan="3">Tour 2</th>
                                     </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                                      <img class="is-rounded" src="./img/france.svg">
+
+                                    <tr>
+                                      <td class="is-pulled-left" style="margin-left: 30px;">
+                                          <figure class="image is-64x64">
+                                                <img class="is-rounded" src="./img/france.svg">
                                           </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               France  / Irlande
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                                 <img class="is-rounded" src="./img/irlande.svg">
-                                            </figure>
-                                        </td>
+                                      </td>
+                                      
+                                      <td class="has-text-centered">
+                                          <div >
+                                            France  / Irlande
+                                          </div>
+                                      </td>
+                                      
+                                      <td class="is-pulled-right" style="margin-right: 30px;">
+                                        <figure class="image image is-48x48">
+                                            <img class="is-rounded" src="./img/irlande.svg">
+                                        </figure>
+                                      </td>
                                     </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/pays_galles.svg">
+                                    
+                                    <tr>
+                                      <td class="is-pulled-left" style="margin-left: 30px;">
+                                          <figure class="image is-64x64">
+                                                <img class="is-rounded" src="./img/pays_galles.svg">
                                           </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               Pays de galles  / Ecosse
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/scotland.svg">
-                                            </figure>
-                                        </td>
+                                      </td>
+                                      
+                                      <td class="has-text-centered">
+                                          <div >
+                                            Pays de galles  / Ecosse
+                                          </div>
+                                      </td>
+                                      
+                                      <td class="is-pulled-right" style="margin-right: 30px;">
+                                        <figure class="image image is-48x48">
+                                            <img class="is-rounded" src="./img/scotland.svg">
+                                        </figure>
+                                      </td>
                                     </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/italie.png">
+                                    
+                                    <tr>
+                                      <td class="is-pulled-left" style="margin-left: 30px;">
+                                          <figure class="image is-64x64">
+                                                <img class="is-rounded" src="./img/italie.png">
                                           </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               Italie  / Angleterre
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/angleterre.svg">
-                                            </figure>
-                                        </td>
+                                      </td>
+                                      
+                                      <td class="has-text-centered">
+                                          <div >
+                                            Italie  / Angleterre
+                                          </div>
+                                      </td>
+                                      
+                                      <td class="is-pulled-right" style="margin-right: 30px;">
+                                        <figure class="image image is-48x48">
+                                            <img class="is-rounded" src="./img/angleterre.svg ">
+                                        </figure>
+                                      </td>
                                     </tr>
-                                   
-                                </table>
-                            </div>
-                            </div>  
-              </div>        
-                <!-- =======--> 
+                            </table>
+                            
+                              </div>      
+                        </div>    
+                
+            </div>        
+
+            <div class="columns" id="first-columns-par-tours" style="display: none;">
+              <div class="column" id="col-tour-1" style="display: none;">
+                    <div class="table-container   ">
+                        <table class="table is-fullwidth">
+                          <tr>
+                            <th colspan="3">Tour 1</th>
+                          </tr>
+
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/scotland.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">13:00</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Ecosse  / Angleterre <br>
+                                  
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/angleterre.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/irlande.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">17:45</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Irlande  / Pays de Galles
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/pays_galles.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/france.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">16:00</b><br>
+                                  <b class="subtitle">27 Mars</b> <br>
+                                  France  / Italie
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/italie.png ">
+                              </figure>
+                            </td>
+                          </tr>
+                        </table>
+                  
+                    </div>      
+              </div>
+              <div class="column" id="col-tour-2" style="display: none;">
+                    <div class="table-container   ">
+                        <table class="table is-fullwidth">
+                          <tr>
+                            <th colspan="3">Tour 2</th>
+                          </tr>
+
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/scotland.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">13:00</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Ecosse  / Angleterre <br>
+                                  
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/angleterre.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/irlande.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">17:45</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Irlande  / Pays de Galles
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/pays_galles.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/france.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">16:00</b><br>
+                                  <b class="subtitle">27 Mars</b> <br>
+                                  France  / Italie
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/italie.png ">
+                              </figure>
+                            </td>
+                          </tr>
+                        </table>
+                  
+                    </div>      
+              </div>
+              <div class="column" id="col-tour-3" style="display: none;">
+                    <div class="table-container   ">
+                        <table class="table is-fullwidth">
+                          <tr>
+                            <th colspan="3">Tour 3</th>
+                          </tr>
+
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/scotland.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">13:00</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Ecosse  / Angleterre <br>
+                                  
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/angleterre.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/irlande.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">17:45</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Irlande  / Pays de Galles
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/pays_galles.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/france.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">16:00</b><br>
+                                  <b class="subtitle">27 Mars</b> <br>
+                                  France  / Italie
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/italie.png ">
+                              </figure>
+                            </td>
+                          </tr>
+                        </table>
+                  
+                    </div>      
+              </div>
+              <div class="column" id="col-tour-4" style="display: none;">
+                    <div class="table-container   ">
+                        <table class="table is-fullwidth">
+                          <tr>
+                            <th colspan="3">Tour 4</th>
+                          </tr>
+
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/scotland.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">13:00</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Ecosse  / Angleterre <br>
+                                  
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/angleterre.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/irlande.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">17:45</b><br>
+                                  <b class="subtitle">26 Mars</b> <br>
+                                  Irlande  / Pays de Galles
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/pays_galles.svg">
+                              </figure>
+                            </td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-pulled-left" style="margin-left: 30px;">
+                                <figure class="image is-128x128">
+                                      <img class="is-rounded" src="./img/france.svg">
+                                </figure>
+                            </td>
+                            
+                            <td class="has-text-centered">
+                                <div >
+                                  <b class="subtitle">16:00</b><br>
+                                  <b class="subtitle">27 Mars</b> <br>
+                                  France  / Italie
+                                </div>
+                            </td>
+                            
+                            <td class="is-pulled-right" style="margin-right: 30px;">
+                              <figure class="image image is-128x128">
+                                  <img class="is-rounded" src="./img/italie.png ">
+                              </figure>
+                            </td>
+                          </tr>
+                        </table>
+                  
+                    </div>      
+              </div>
+      
+            </div>        
+            <!-- =======--> 
           </div>
+          
           <div class="tile is-parent">
-            <!-- Content -->
-            <div class="columns" id="second-columns">
-                            <div class="column" id="matches-tour-3">
-                              <div class="table-container">
-                                <table class="table">
-                                    <tr>
-                                        <th colspan="3">Tour 3</th>
-                                    </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                                      <img class="is-rounded" src="./img/angleterre.svg">
-                                          </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               Angleterre  / Pays de Galles
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                                 <img class="is-rounded" src="./img/pays_galles.svg">
-                                            </figure>
-                                        </td>
-                                    </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/scotland.svg">
-                                          </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                                Ecosse  / France
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/france.svg">
-                                            </figure>
-                                        </td>
-                                    </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/irlande.svg">
-                                          </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               Irlande  / Italie
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/italie.png">
-                                            </figure>
-                                        </td>
-                                    </tr>
-                                   
-                                </table>
-                            </div>
-                            </div>  
-                            <div class="column" id="matches-tour-4">
-                              <div class="table-container">
-                                <table class="table">
-                                    <tr>
-                                        <th colspan="3">Tour 4</th>
-                                    </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                                      <img class="is-rounded" src="./img/pays_galles.svg">
-                                          </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               Pays de Galles  / France
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                                 <img class="is-rounded" src="./img/france.svg">
-                                            </figure>
-                                        </td>
-                                    </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/italie.png">
-                                          </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               Italie  / Ecosse
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/scotland.svg">
-                                            </figure>
-                                        </td>
-                                    </tr>
-                                    <tr class="is-flex">
-                                        <td>
-                                          <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/angleterre.svg">
-                                          </figure>
-                                        </td>
-                                        <td>
-                                            <div >
-                                               Angleterre  / Irlande
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <figure class="image image is-48x48">
-                                              <img class="is-rounded" src="./img/irlande.svg">
-                                            </figure>
-                                        </td>
-                                    </tr>
-                                   
-                                </table>
-                            </div>  
-                            </div>  
+              <div class="columns" id="second-columns">
+                
+                <div class="column" id="matches-tour-3">
+                  <div class="table-container   ">
+                      <table class="table is-fullwidth">
+                        <tr>
+                          <th colspan="3">Tour 3</th>
+                        </tr>
+
+                        <tr>
+                          <td class="is-pulled-left" style="margin-left: 30px;">
+                              <figure class="image is-64x64">
+                                    <img class="is-rounded" src="./img/angleterre.svg">
+                              </figure>
+                          </td>
+                          
+                          <td class="has-text-centered">
+                              <div >
+                                Angleterre  / Pays de Galles
+                              </div>
+                          </td>
+                          
+                          <td class="is-pulled-right" style="margin-right: 30px;">
+                            <figure class="image image is-48x48">
+                                <img class="is-rounded" src="./img/pays_galles.svg">
+                            </figure>
+                          </td>
+                        </tr>
+                        
+                        <tr>
+                          <td class="is-pulled-left" style="margin-left: 30px;">
+                              <figure class="image is-64x64">
+                                    <img class="is-rounded" src="./img/scotland.svg">
+                              </figure>
+                          </td>
+                          
+                          <td class="has-text-centered">
+                              <div >
+                                Ecosse  / France
+                              </div>
+                          </td>
+                          
+                          <td class="is-pulled-right" style="margin-right: 30px;">
+                            <figure class="image image is-48x48">
+                                <img class="is-rounded" src="./img/france.svg">
+                            </figure>
+                          </td>
+                        </tr>
+                        
+                        <tr>
+                          <td class="is-pulled-left" style="margin-left: 30px;">
+                              <figure class="image is-64x64">
+                                    <img class="is-rounded" src="./img/irlande.svg">
+                              </figure>
+                          </td>
+                          
+                          <td class="has-text-centered">
+                              <div >
+                                Irlande  / Italie
+                              </div>
+                          </td>
+                          
+                          <td class="is-pulled-right" style="margin-right: 30px;">
+                            <figure class="image image is-48x48">
+                                <img class="is-rounded" src="./img/italie.png ">
+                            </figure>
+                          </td>
+                        </tr>
+                </table>
+                
+                  </div>      
+                </div>  
+                
+                <div class="column" id="matches-tour-4">
+                  <div class="table-container   ">
+                      <table class="table is-fullwidth">
+                        <tr>
+                          <th colspan="3">Tour 4</th>
+                        </tr>
+
+                        <tr>
+                          <td class="is-pulled-left" style="margin-left: 30px;">
+                              <figure class="image is-64x64">
+                                    <img class="is-rounded" src="./img/pays_galles.svg">
+                              </figure>
+                          </td>
+                          
+                          <td class="has-text-centered">
+                              <div >
+                                Pays de Galles  / France
+                              </div>
+                          </td>
+                          
+                          <td class="is-pulled-right" style="margin-right: 30px;">
+                            <figure class="image image is-48x48">
+                                <img class="is-rounded" src="./img/france.svg">
+                            </figure>
+                          </td>
+                        </tr>
+                        
+                        <tr>
+                          <td class="is-pulled-left" style="margin-left: 30px;">
+                              <figure class="image is-64x64">
+                                    <img class="is-rounded" src="./img/italie.png">
+                              </figure>
+                          </td>
+                          
+                          <td class="has-text-centered">
+                              <div >
+                                Italie  / Ecosse
+                              </div>
+                          </td>
+                          
+                          <td class="is-pulled-right" style="margin-right: 30px;">
+                            <figure class="image image is-48x48">
+                                <img class="is-rounded" src="./img/scotland.svg">
+                            </figure>
+                          </td>
+                        </tr>
+                        
+                        <tr>
+                          <td class="is-pulled-left" style="margin-left: 30px;">
+                              <figure class="image is-64x64">
+                                    <img class="is-rounded" src="./img/angleterre.svg">
+                              </figure>
+                          </td>
+                          
+                          <td class="has-text-centered">
+                              <div >
+                                Angleterre  / Irlande
+                              </div>
+                          </td>
+                          
+                          <td class="is-pulled-right" style="margin-right: 30px;">
+                            <figure class="image image is-48x48">
+                                <img class="is-rounded" src="./img/irlande.svg ">
+                            </figure>
+                          </td>
+                        </tr>
+                </table>
+                
+                  </div>      
+                </div>  
+                
               </div>        
-                <!-- =======--> 
           </div>
         </div>
-      </div>
 
+        <div class="tile is-vertical is-8" id="equipe_scotland" style="display: none;">
+              <div class="tile">
+                <div class="tile is-parent is-vertical">
+                  <article class="tile is-child notification">
+                    <p class="title">À propos</p>
+                    <p class="subtitle">L'équipe féminine d'Ecosse de rugby est l'équipe nationale qui représente l'Ecosse dans les compétitions régionales, continentales et internationales féminines de rugby. Elle est constituée par une sélection des meilleures joueuses écossaises sous l'égide de la Scottish Rugby Union.</p>
+                  </article>
+                  <article class="tile is-child notification is-warning">
+                    <p class="title">Matches importants</p>
+                    <p class="subtitle">Premier match officiel 
+                      14 février 1993 </p>
+                      <div class="center" style="text-align: center;">
+                            <img src="./img/scotland.svg" alt="" width="45px" height="45px"/>  
+                                  Écosse 10 - 0 Irlande 
+                            <img src="./img/irlande.svg" alt="" width="45px" height="45px"/>
+                      </div> <br>
+                    <p class="subtitle">Plus large victoire 
+                      17 mai 2009 </p>
+                      <div class="center" style="text-align: center;">
+                          <img src="./img/scotland.svg" alt="" width="45px" height="45px"/>  
+                                Écosse 84 - 0 Russie 
+                          <img src="./img/russie.jpg" alt="" width="45px" height="45px">
+                      </div>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-info">
+                    <p class="title">Scotland</p>
+                    <figure class="image is-4by3">
+                      <img src="./img/scotland.svg">
+                    </figure> <br>
+                    <p class="subtitle">Après avoir joué sous la bannière de la Grande-Bretagne de 1986 à 1990, les Écossaises jouent et gagnent leur premier match international contre l'Irlande en 1993. L'année suivante, elles jouent la Coupe du monde de rugby à XV féminine à domicile.</p>
+                  </article>
+                </div>
+              </div>
+           
+              <div class="tile is-parent">
+                <article class="tile is-child notification" id="article_scot_last">
+                  <div class="columns">
+                      <div class="column">
+                        <figure class="image is-2by1">
+                          <img src="./img/scotland_page_match.jpg"/>
+                        </figure>
+                      </div>
+                  
+                    <div class="column">
+                        <p class="subtitle">
+                          Le Tournoi des Six Nations terminera avec un Crunch entre lAngleterre et la France lors du Super Samedi à Bayonne en 2022.
+                        </p>
+                    </div>
+                  </div>
+                  
+                  <p class="title">Important</p>
+                  <p class="subtitle">
+                    Des changements dans la compétition en 2021 furent une réussite avec un nouveau créneau qui a conduit à des chiffres daudience plus élevés et plus d'engagement sur les réseaux sociaux.
+                    Les matchs en 2022 seront, du coup, joués dans un créneau de six semaines de fin mars et avril, et ne seront plus alignés avec les matchs du Tournoi masculin.
+                  </p>
+                </article>
+              </div>
+        </div>
+    </div>
+
+              <!-- CAPITAINES -->
+              <div class="tile is-parent" id="capitaines_scot" style="display: none;">
+                <article class="tile is-child notification" id="article_equipe_scot_last">
+                  <p class="title" style="color: white;">Principales Joueuses</p>
+                  <div class="columns">
+                    <div class="column">
+                      <img src='./img/lucy.jpg' class='imgRedonda'/>
+                      <figcaption>Lucy Millard</figcaption>
+                    </div>
+                    <div class="column">
+                      <img src='./img/melanie.jpeg' class='imgRedonda'/>
+                      <figcaption>Melanie Christie</figcaption>
+                    </div>
+                    <div class="column">
+                      <img src='./img/katie.jpg' class='imgRedonda'/>
+                      <figcaption>Katie Davies</figcaption>
+                    </div>
+                    <div class="column">
+                      <img src='./img/veronica.jpg' class='imgRedonda'/>
+                      <figcaption>Veronica Fitzpatrick</figcaption>
+                    </div>
+                  </div>
+                </article>
+              </div>
 
     <script type="text/javascript" src="lib/main.js"></script>    
+    <script type="text/javascript" src="lib/functions.js"></script>    
   </body>
 </html>
